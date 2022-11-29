@@ -1,0 +1,55 @@
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJEYWZmYSIsImVtYWlsIjoiZGFmZmFAZ21haWwuY29tIiwiaWF0IjoxNjYxNTgxNjg4LCJleHAiOjE2NjE1ODE3MDh9.olNt3TesnDYSWonRyMMklnE6r78NvvBRluGpC6tBdb0
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Daffa",
+    "email": "daff12@gmail.com",
+    "password": "12345",
+    "confPassword": "12345"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "daffa@gmail.com",
+    "password" : "12345"
+}
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE http://localhost:5000/logout
+
+###
+GET http://localhost:5000/products
+
+###
+GET http://localhost:5000/products/2
+
+###
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "title": "Product 3",
+    "price" : 100
+}
+
+###
+PATCH  http://localhost:5000/products/1
+Content-Type: application/json
+
+{
+    "title": "Product wadidaw", 
+    "price" : 1000
+}
+
+###
+DELETE   http://localhost:5000/products/4
